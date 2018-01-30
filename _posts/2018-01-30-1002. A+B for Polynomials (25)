@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "1002. A+B for Polynomials (25)"
+date:   2018-01-30
+excerpt: "This time, you are supposed to find A+B where A and B are two polynomials."
+tag:
+- PAT
+- OJ
+comments: true
+---
+
+# 1002. A+B for Polynomials (25)
+
+This time, you are supposed to find A+B where A and B are two polynomials.
+
+## Input
+
+Each input file contains one test case. Each case occupies 2 lines, and each line contains the information of a polynomial: K N1 aN1 N2 aN2 ... NK aNK, where K is the number of nonzero terms in the polynomial, Ni and aNi (i=1, 2, ..., K) are the exponents and coefficients, respectively. It is given that 1 <= K <= 10，0 <= NK < ... < N2 < N1 <=1000.
+
+## Output
+
+For each test case you should output the sum of A and B in one line, with the same format as the input. Notice that there must be NO extra space at the end of each line. Please be accurate to 1 decimal place.
+## Sample Input
+```
+2 1 2.4 0 3.2
+2 2 1.5 1 0.5
+```
+## Sample Output
+```
+3 2 1.5 1 2.9 0 3.2
+```
+## Note
+> * Make sure coefficients is large enough, like 1005, 1010 or even 2000, 10000...  just don't use 1000.
+> * Init coefficients array by zero.
+> * Output must ordered by their exponent from larger to small and accurate to 1 decimal places.
+> * No extra space.
+
+## Solution
+``` c
+#include <iostream>
+#include <cstring>
+#include <iomanip>
+
+using namespace std;
+
+// 1005 is to make sure the coefficients array is big enough
+float coefficients[1005];
+
+int main(void)
+{
+    int k, ex;
+    float co; 
+
+    // init coefficients array by zero.
+    memset(coefficients, 0, sizeof(coefficients));  // init coefficients with zero.
+
+    // handle input.
+        cin>>k;
+        while(k--){
+            cin>>ex>>co;
+            coefficients[ex] += co;
+        }
+        cin>>k;
+        while(k--){
+            cin>>ex>>co;
+            coefficients[ex] += co;
+        }
+    // record mounts of nonzero terms.
+    int count = 0;
+    for(int i = 0; i < 1002; i++) if(coefficients[i]) count += 1;
+    cout<<count;
+
+    // output each nonzero terms from large to small.
+    for(int i = 1004; i >= 0; i--){
+        if(coefficients[i]) cout<<" "<<i<<" "<<setiosflags(ios::fixed)<<setprecision(1)<<coefficients[i];
+    }
+    cout<<endl;
+    return 0;
+}
+
+```
+## Submit
+![1002submit.png](http://upload-images.jianshu.io/upload_images/9988491-49c7d0e2adeefbc2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
