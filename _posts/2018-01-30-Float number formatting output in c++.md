@@ -5,7 +5,7 @@ date:   2018-01-30
 excerpt: "You can set precision by using setprecision() function provided by head file iomanip. So DO NOT forget to include iomanip before setting precision."
 tag:
 - C++
-comments: true
+comments: false
 ---
 You can set precision by using *setprecision()* function provided by head file **iomanip**. So **DO NOT** forget to include iomanip before setting precision.
 ```c
