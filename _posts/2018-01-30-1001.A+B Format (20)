@@ -1,0 +1,79 @@
+---
+layout: post
+title:  "1001.A+B Format (20)"
+date:   2018-01-30
+excerpt: "Calculate a + b and output the sum in standard format -- that is, the digits must be separated into groups of three by commas (unless there are less than four digits)."
+tag:
+- PAT 
+- OJ
+comments: true
+---
+# 1001. A+B Format (20)
+
+Calculate a + b and output the sum in standard format -- that is, the digits must be separated into groups of three by commas (unless there are less than four digits).
+
+## Input
+
+Each input file contains one test case. Each case contains a pair of integers a and b where -1000000 <= a, b <= 1000000. The numbers are separated by a space.
+
+## Output
+
+For each test case, you should output the sum of a and b in one line. The sum must be written in the standard format.
+## Sample Input
+
+>-1000000 9
+
+## Sample Output
+
+>-999,991
+
+## Note
+>* Output the first n digits at first ( n is the remainer of length of sum by 3).
+>* Don't forget the sign of number.
+>* Solution is not unique.
+
+## Solution
+``` c
+#include <cstdio>
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+void format_output(long a){
+    bool isnegative = (a<0?1:0);
+    if (isnegative){
+        cout<<"-";
+        a = -a;
+    }
+    // string to reserve the result.
+    string res;
+
+    // convert a to string.
+    stringstream ss;
+    ss<<a;
+    string s = ss.str();
+
+    int j = 0;
+    // remainder of length by 3
+    int rem = s.length() % 3;
+    // output head digits, which mounts is rem.
+    for(int i = 0; i < rem; i++) cout<<s[i];
+    // output remain digits and comma.
+    for(int i = rem; i < s.length(); i++){
+        if((i-rem)%3 == 0 && (i-rem) != 0) cout<<",";
+        if((i-rem) == 0 && rem) cout<<",";
+        cout<<s[i];
+    }
+    cout<<endl;
+}
+
+int main(void)
+{
+    long a, b, c;
+    cin>>a>>b;
+    format_output(a+b);
+    return 0;
+}
+```
+## Submit
+![1001submit.png](https://github.com/RunningIkkyu/runningikkyu.github.com/blob/master/assets/img/pat-1001.png?raw=true)
