@@ -4,7 +4,7 @@ bio:                'Just a Runner.'
 description:        "Runner's World"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
+logo:               'assets/img/anonymous.png'
 background:         'assets/img/hacker-1.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
