@@ -6,7 +6,7 @@ date: 2016-03-21
 comments: false
 ---
     
-<center><a href="http://RunningIkkyu.github.io"><b></b></a> Unemployed engineer.</center>
+<center><a href="http://RunningIkkyu.github.io"><b></b></a> Computer Science student.</center>
 
 ## Hobby
 * Running 
