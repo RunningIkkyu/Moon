@@ -146,7 +146,7 @@ Notes:
 
 3) Dijkstra’s algorithm doesn’t work for graphs with negative weight edges. For graphs with negative weight edges, Bellman–Ford algorithm can be used.
 
-4) If the count of shortest path is needed, we can maintain an array called spCnt(shortest path counter). Then spCnt[i] indicates the count of shortest path from source node to node i. The core codes are as follow:
+4) If the count of shortest path is needed, we can maintain an array called spCnt(shortest path counter). Then spCnt[i] indicates the count of shortest path from source node to node i. The core code is as follow:
 ```c
      // This Initialization is nessesary.
      spCnt[src] = 1; 
