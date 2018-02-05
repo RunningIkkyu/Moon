@@ -139,7 +139,7 @@ void dijkstra(int graph[V][V], int src)
 }
 ```
 
-Notes:
+Notes:  
 1) The code finds shortest distances from source to all vertices. If we are interested only in shortest distance from source to a single target, we can break the for loop when the picked minimum distance vertex is equal to target (Step 3.a of algorithm).
 
 2) Time Complexity of the implementation is O(V^2). If the input graph is represented using adjacency list, it can be reduced to O(E log V) with the help of binary heap. 
