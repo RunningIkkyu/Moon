@@ -172,7 +172,7 @@ Notes:
                 dist[v] = dist[u] + graph[u][v];
                 spCnt[v] = spCnt[u];        // update the count of paths of v.
             }
-            else if(dist[u]+graph[u][v] < dist[v])
+            else if(dist[u]+graph[u][v] == dist[v])
                 spCnt[v] = spCnt[u] + spCnt[v];
      }
   
