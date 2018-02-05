@@ -24,7 +24,23 @@ In *Dijkstra's Algorithm*, we maintain two sets, one sets(we call it set **sptSe
 ## Example
 Let's understand the algorithm with this example:
 ![image](https://raw.githubusercontent.com/RunningIkkyu/runningikkyu.github.com/master/assets/img/Dijkstra-s%20Algorithm/2018-02-05-1.jpg)  
+This is initial status, where INF indicates infinite :  
 
 |sptSet|distance array|  
 |-|-|  
-|Empty|{0, INF, INF, INF, INF, INF, INF, INF}|
+|Empty|{0, INF, INF, INF, INF, INF, INF, INF, INF}|  
+  
+  
+Now pick the vertex with minimum distance value. The vertex 0 is picked, include it in sptSet.So sptSet becomes {0}. After including 0 to sptSet, update distance values of its adjacent vertices. Adjacent vertices of 0 are 1 and 7. The distance values of 1 and 7 are updated as 4 and 8. Following subgraph shows vertices and their distance values, only the vertices with finite distance values are shown. The vertices included in sptSet are shown in green color.
+![img]()    
+
+|sptSet|distance array|  
+|-|-|  
+|{0}|{0, 4, INF, INF, INF, INF, INF, 8, INF}|  
+
+Pick the vertex with minimum distance value and not included in sptSet. The vertex 1 is picked and added to sptSet. So sptSet now becomes {0, 1}. Update the distance values of adjacent vertices of 1. The distance value of vertex 2 becomes 12.  
+![image]()  
+
+|sptSet|distance array|  
+|-|-|  
+|{0,1}|{0, 4, 12, INF, INF, INF, INF, 8, INF}|  
