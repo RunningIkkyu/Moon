@@ -11,7 +11,7 @@ comments: true
 ### convert int to string
 
 ```cpp
-#inlude <sstream>
+#inlcude <sstream>
 using namespace std;
 string int2string(int a){
     stringstream ss;
