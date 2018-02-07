@@ -10,7 +10,7 @@ comments: true
 
 ### convert int to string
 
-```c
+```cpp
 #inlude <sstream>
 using namespace std;
 string int2string(int a){
@@ -21,7 +21,7 @@ string int2string(int a){
 ```
 
 ### conert string to int
-```c
+```cpp
 #include <sstream>
 using namespace std;
 int strin2int(string s){
