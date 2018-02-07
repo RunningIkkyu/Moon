@@ -11,6 +11,7 @@ comments: true
 ### convert int to string
 
 ```c
+#inlude <sstream>
 string int2string(int a){
     stringstream ss;
     ss<<a;
@@ -20,6 +21,7 @@ string int2string(int a){
 
 ### conert string to int
 ```c
+#include <sstream>
 int strin2int(string s){
     stringstream ss;
     ss<<s;
