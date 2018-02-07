@@ -12,6 +12,7 @@ comments: true
 
 ```c
 #inlude <sstream>
+using namespace std;
 string int2string(int a){
     stringstream ss;
     ss<<a;
@@ -22,6 +23,7 @@ string int2string(int a){
 ### conert string to int
 ```c
 #include <sstream>
+using namespace std;
 int strin2int(string s){
     stringstream ss;
     ss<<s;
