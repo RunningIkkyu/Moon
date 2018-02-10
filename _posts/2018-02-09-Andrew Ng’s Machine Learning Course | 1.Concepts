@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Andrew Ng’s Machine Learning Course | 1-1 What is Machine Learning"
+title:  "Andrew Ng’s Machine Learning Course |1.Concepts"
 date:   2018-02-09
 excerpt: "What is machine learning? We will try to define what it is and also try to give you a sense of when you want to use machine learning. "
 tag:
@@ -24,5 +24,6 @@ We can specify many learning problems in this fashion, such as learningto recogn
 
 # Machine learning algorithms:
 * Supervised learning
-* Unsupervised learning
+* Unsupervised learning  
+
 Others : Reinforcement learning, recommender systems.
