@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pyplot tutorial"
-date:   2018--2-16
+date:   2018-02-16
 excerpt: "matplotlib.pyplot is a collection of command style functions that make matplotlib work like MATLAB, In this post, we'll learn how to plot lines with pyplot."
 tag:
 - Matplotlib 
