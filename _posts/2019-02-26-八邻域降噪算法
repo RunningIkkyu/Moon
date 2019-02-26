@@ -4,7 +4,8 @@ title:  "八邻域降噪算法"
 date:   2019-02-26
 excerpt: "一种简单的八邻域降噪算法, 通过扫描像素周围区域, 根据给定阈值判断是否去除该点"
 tag:
-- C++
+- python
+- CV
 comments: true
 ---
 
